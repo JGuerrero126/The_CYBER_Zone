@@ -30,13 +30,7 @@ router.get("/", async (req, res) => {
 router.get("/blogs/:id", async (req, res) => {
   try {
     const blogData = await Blog.findByPk(req.params.id, {
-      include: [
-        {
-          model: User,
-          attributes: ["name"],
-          model: Comment,
-        },
-      ],
+      include: [{ model: Comment }, { model: User, attributes: ["name"] }],
     });
 
     const blog = blogData.get({ plain: true });
@@ -68,12 +62,17 @@ router.get("/blogs/edit/:id", async (req, res) => {
 router.get("/dashboard", withAuth, async (req, res) => {
   try {
     // Find the logged in user based on the session ID
-    const blogData = await Blog.findByPk(req.session.user_id);
+    console.log(req.session);
+    const blogData = await Blog.findAll({
+      where: {
+        user_id: req.session.user_id,
+      },
+    });
 
     const blogs = blogData.map((blog) => blog.get({ plain: true }));
 
     res.render("dashboard", {
-      ...blogs,
+      blogs,
       logged_in: true,
     });
   } catch (err) {

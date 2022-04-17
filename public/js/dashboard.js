@@ -1,4 +1,4 @@
-const blogFormHandler = async (event) => {
+const newBlogHandler = async (event) => {
   event.preventDefault();
 
   const title = document.querySelector("#blog-title").value.trim();
@@ -18,3 +18,7 @@ const blogFormHandler = async (event) => {
     }
   }
 };
+
+document
+  .querySelector("#newBlogBtn")
+  .addEventListener("submit", newBlogHandler);

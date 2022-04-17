@@ -1,7 +1,7 @@
 {{#if blogs}}
   {{#each blogs as |blog|}}
     <div data-id="{{id}}" class="card">
-      <a href="/blogs/{{id}}">
+      <a href="/blogs/edit/{{id}}">
         <h5 class="card-header">{{title}}</h5>
       </a>
     </div>
@@ -43,7 +43,7 @@
         <div class="mb-3">
           <label for="blog-title" class="form-label">Title:</label>
           <input
-            type="email"
+            type="text"
             class="form-control"
             id="blog-title"
             placeholder="Title Of Your Blog"
@@ -60,8 +60,14 @@
           class="btn btn-secondary"
           data-bs-dismiss="modal"
         >Close</button>
-        <button type="button" class="btn btn-primary">Understood</button>
+        <button
+          type="button"
+          class="btn btn-primary"
+          id="newBlogBtn"
+        >Submit</button>
       </div>
     </div>
   </div>
 </div>
+
+<script src="/js/dashboard.js"></script>

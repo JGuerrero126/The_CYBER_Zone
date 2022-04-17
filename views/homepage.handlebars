@@ -1,11 +1,13 @@
 {{#if blogs}}
   {{#each blogs as |blog|}}
     <div data-id="{{id}}" class="card">
-      <h5 class="card-header">{{title}}</h5>
-      <p>Posted by {{user.name}} on {{date}}</p>
-      <div class="card-body">
-        <p class="card-text">{{text}}</p>
-      </div>
+      <a href="/blogs/{{id}}">
+        <h5 class="card-header">{{title}}</h5>
+        <p>Posted by {{user.name}} on {{format_date date_created}}</p>
+        <div class="card-body">
+          <p class="card-text">{{text}}</p>
+        </div>
+      </a>
     </div>
   {{/each}}
 {{else}}

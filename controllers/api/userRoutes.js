@@ -49,14 +49,11 @@ router.post("/logout", (req, res) => {
 router.post("/", async (req, res) => {
   try {
     console.log(req.body);
-    const newUser = await User.create({
-      name: req.body.name,
-      email: req.body.email,
-      password: req.body.password,
-    });
+    const newUser = await User.create(req.body);
 
     req.session.save(() => {
       req.session.logged_in = true;
+      req.session.user_id = newUser.id;
 
       res.status(200).json(newUser);
     });

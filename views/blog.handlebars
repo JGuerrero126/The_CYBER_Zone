@@ -1,4 +1,4 @@
-<div data-id="{{id}}" class="card">
+<div data-id="{{blog.id}}" class="card">
   <h5 class="card-header">{{blog.title}}</h5>
   <p>Posted by {{blog.username}} on {{blog.date}}</p>
   <div class="card-body">
@@ -14,9 +14,9 @@
       <div class="card-body">
         <blockquote class="blockquote mb-0">
           <p>{{comment.text}}</p>
-          <footer class="blockquote-footer">-{{user.name}}
+          <footer class="blockquote-footer">{{user.name}}
             on
-            {{comment.date_created}}</footer>
+            {{format_date comment.date_created}}</footer>
         </blockquote>
       </div>
     </div>
@@ -35,5 +35,11 @@
       aria-describedby="commentinput"
     />
   </div>
-  <button type="submit" class="btn btn-primary">Submit</button>
+  <button
+    type="submit"
+    class="btn btn-primary"
+    data-id="{{blog.id}}"
+  >Submit</button>
 </form>
+
+<script src="/js/blog.js"></script>

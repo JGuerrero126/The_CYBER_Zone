@@ -1,1 +1,26 @@
-[{}]
+[
+  {
+    "title": "My Thoughts On JS",
+    "text": "Honestly, JS is lowkey mid. It just sucks sometimes.",
+    "date_created": "04/16/2022",
+    "user_id": 1
+  },
+  {
+    "title": "My Thoughts On CSS",
+    "text": "Honestly, CSS is highkey GODLIKE. It just rules.",
+    "date_created": "04/16/2022",
+    "user_id": 1
+  },
+  {
+    "title": "My Thoughts On The Other Guys Thoughts on JS",
+    "text": "Honestly, You are lowkey mid. You just sucks sometimes.",
+    "date_created": "04/16/2022",
+    "user_id": 2
+  },
+  {
+    "title": "My Thoughts On On The Other Guys Thoughts on CSS",
+    "text": "Honestly, 100% Agree. Keep Living your life king",
+    "date_created": "04/16/2022",
+    "user_id": 2
+  }
+]

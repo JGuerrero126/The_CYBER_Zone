@@ -1,1 +1,26 @@
-[{}]
+[
+  {
+    "text": "Yo This blogpost is lowkey mid!!",
+    "date_created": "04/16/2022",
+    "user_id": 2,
+    "blog_id": 1
+  },
+  {
+    "text": "GOTTA AGREE!!",
+    "date_created": "04/16/2022",
+    "user_id": 2,
+    "blog_id": 2
+  },
+  {
+    "text": "Yo This blogpost is mid af!!",
+    "date_created": "04/16/2022",
+    "user_id": 1,
+    "blog_id": 3
+  },
+  {
+    "text": "Thanks King!!",
+    "date_created": "04/16/2022",
+    "user_id": 1,
+    "blog_id": 4
+  }
+]
