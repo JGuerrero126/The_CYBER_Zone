@@ -1,0 +1,39 @@
+<div data-id="{{id}}" class="card">
+  <h5 class="card-header">{{blog.title}}</h5>
+  <p>Posted by {{blog.username}} on {{blog.date}}</p>
+  <div class="card-body">
+    <p class="card-text">{{blog.text}}</p>
+  </div>
+</div>
+
+{{#if comments}}
+  {{#each comments as |comment|}}
+    <div class="card">
+      <div class="card-header">
+      </div>
+      <div class="card-body">
+        <blockquote class="blockquote mb-0">
+          <p>{{comment.text}}</p>
+          <footer class="blockquote-footer">-{{user.name}}
+            on
+            {{comment.date_created}}</footer>
+        </blockquote>
+      </div>
+    </div>
+  {{/each}}
+{{else}}
+  <p>No comments here, you could add one though!</p>
+{{/if}}
+
+<form>
+  <div class="mb-3">
+    <label for="comment-text" class="form-label">Comment:</label>
+    <input
+      type="text"
+      class="form-control"
+      id="comment-text"
+      aria-describedby="commentinput"
+    />
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>

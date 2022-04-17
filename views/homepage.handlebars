@@ -1,0 +1,13 @@
+{{#if blogs}}
+  {{#each blogs as |blog|}}
+    <div data-id="{{id}}" class="card">
+      <h5 class="card-header">{{title}}</h5>
+      <p>Posted by {{user.name}} on {{date}}</p>
+      <div class="card-body">
+        <p class="card-text">{{text}}</p>
+      </div>
+    </div>
+  {{/each}}
+{{else}}
+  <h5>There are no blogs currently saved. Why not add one?</h5>
+{{/if}}
