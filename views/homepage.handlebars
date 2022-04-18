@@ -1,11 +1,14 @@
 {{#if blogs}}
   {{#each blogs as |blog|}}
-    <div data-id="{{id}}" class="card">
+    <div data-id="{{id}}" class="card custom-card">
       <a href="/blogs/{{id}}">
-        <h5 class="card-header">{{title}}</h5>
-        <p>Posted by {{user.name}} on {{format_date date_created}}</p>
-        <div class="card-body">
-          <p class="card-text">{{text}}</p>
+        <h5 class="card-header custom-header">{{title}}</h5>
+        <div class="card-body custom-body"></div>
+          <p class="card-text custom-body">{{text}}</p>
+          <p class="card-text custom-body">Posted by
+          {{user.name}}
+          on
+          {{format_date date_created}}</p>
         </div>
       </a>
     </div>

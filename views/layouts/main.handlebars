@@ -14,25 +14,37 @@
     <title>THE CYBER ZONE</title>
   </head>
   <body>
-    <header>
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <header class="">
+      <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container-fluid">
-          <a class="navbar-brand" href="/">THE CYBER ZONE</a>
+          <a class="custom-color title" href="/">THE CYBER ZONE</a>
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="/">Home</a>
+                <a
+                  class="custom-color choices"
+                  aria-current="page"
+                  href="/"
+                >Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/dashboard">Dashboard</a>
+                <a class="custom-color choices" href="/dashboard">Dashboard</a>
               </li>
               {{#if logged_in}}
                 <li class="nav-item">
-                  <a class="nav-link" id="logout" href="/login">Logout</a>
+                  <a
+                    class="custom-color choices"
+                    id="logout"
+                    href="/login"
+                  >Logout</a>
                 </li>
               {{else}}
                 <li class="nav-item">
-                  <a class="nav-link" id="login" href="/login">Login</a>
+                  <a
+                    class="custom-color choices"
+                    id="login"
+                    href="/login"
+                  >Login</a>
                 </li>
               {{/if}}
             </ul>

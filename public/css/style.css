@@ -1,0 +1,57 @@
+body {
+  background-color: rgb(47, 201, 201);
+}
+
+body a {
+  text-decoration: none;
+}
+
+header {
+  background-color: rgb(165, 90, 235);
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+header a {
+  color: aliceblue;
+  margin-left: 1rem;
+}
+
+.title {
+  font-size: 2em;
+}
+
+.choices {
+  font-size: 1em;
+}
+
+.custom-card {
+  margin-top: 3em;
+  margin-left: 1em;
+  margin-right: 1em;
+  border: 0.5rem solid rgb(255, 255, 255);
+  border-radius: 0.5em;
+}
+
+.custom-header {
+  background-color: rgb(69, 214, 171);
+  color: aliceblue;
+}
+
+.custom-body {
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  margin-bottom: 1rem;
+}
+
+.comment-card {
+  margin-top: 3em;
+  margin-left: 4em;
+  margin-right: 4em;
+  border: 0.5rem solid rgb(255, 255, 255);
+  border-radius: 0.5em;
+}
+
+/* .custom-color {
+  color: aliceblue;
+} */
