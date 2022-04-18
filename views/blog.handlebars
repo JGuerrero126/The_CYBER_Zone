@@ -1,6 +1,6 @@
 <div data-id="{{blog.id}}" class="card">
   <h5 class="card-header">{{blog.title}}</h5>
-  <p>Posted by {{blog.username}} on {{blog.date}}</p>
+  <p>Posted by {{user.name}} on {{format_date blog.date_created}}</p>
   <div class="card-body">
     <p class="card-text">{{blog.text}}</p>
   </div>
@@ -25,7 +25,7 @@
   <p>No comments here, you could add one though!</p>
 {{/if}}
 
-<form>
+<form data-id="{{blog.id}}" class="newcomment">
   <div class="mb-3">
     <label for="comment-text" class="form-label">Comment:</label>
     <input

@@ -30,13 +30,13 @@ router.get("/", async (req, res) => {
 router.get("/blogs/:id", async (req, res) => {
   try {
     const blogData = await Blog.findByPk(req.params.id, {
-      include: [{ model: Comment }, { model: User, attributes: ["name"] }],
+      include: [{ model: Comment }, { model: User, exclude: ["password"] }],
     });
 
     const blog = blogData.get({ plain: true });
 
     res.render("blog", {
-      ...blog,
+      blog,
       logged_in: req.session.logged_in,
     });
   } catch (err) {

@@ -1,10 +1,12 @@
 const newBlogHandler = async (event) => {
+  console.log("this is working!");
   event.preventDefault();
 
   const title = document.querySelector("#blog-title").value.trim();
   const text = document.querySelector("#blog-text").value.trim();
 
   if (title && text) {
+    console.log("this is working!");
     const response = await fetch("/api/blogs", {
       method: "POST",
       body: JSON.stringify({ title, text }),
@@ -20,5 +22,5 @@ const newBlogHandler = async (event) => {
 };
 
 document
-  .querySelector("#newBlogBtn")
+  .querySelector(".newblogform")
   .addEventListener("submit", newBlogHandler);
