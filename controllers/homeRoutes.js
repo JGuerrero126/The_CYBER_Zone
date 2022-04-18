@@ -27,7 +27,7 @@ router.get("/", async (req, res) => {
   }
 });
 
-router.get("/blogs/:id", async (req, res) => {
+router.get("/blogs/:id", withAuth, async (req, res) => {
   try {
     const blogData = await Blog.findByPk(req.params.id, {
       include: [{ model: Comment }, { model: User, exclude: ["password"] }],
@@ -44,7 +44,7 @@ router.get("/blogs/:id", async (req, res) => {
   }
 });
 
-router.get("/blogs/edit/:id", async (req, res) => {
+router.get("/blogs/edit/:id", withAuth, async (req, res) => {
   try {
     const blogData = await Blog.findByPk(req.params.id);
 
