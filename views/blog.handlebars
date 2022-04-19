@@ -2,7 +2,7 @@
   <h5 class="card-header custom-header">{{title}}</h5>
   <div class="card-body custom-body">
     <p class="card-text custom-body">{{text}}</p>
-    <p>Posted by {{name}} on {{format_date date_created}}</p>
+    <p>Posted by {{user.name}} on {{format_date date_created}}</p>
   </div>
 </div>
 
@@ -14,7 +14,7 @@
       <div class="card-body">
         <blockquote class="blockquote mb-0">
           <p>{{comment.text}}</p>
-          <footer class="blockquote-footer">{{name}}
+          <footer class="blockquote-footer">{{user.name}}
             on
             {{format_date comment.date_created}}</footer>
         </blockquote>
