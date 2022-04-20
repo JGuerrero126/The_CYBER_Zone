@@ -39,6 +39,17 @@ header a:hover {
   color: black;
 }
 
+footer {
+  font-family: "Rubik Glitch", cursive;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 2.5rem;
+  background: var(--lightblue);
+  border-top: 0.5em solid var(--lightblue);
+  color: aliceblue;
+  text-shadow: 0.2em 0.2em var(--black);
+}
 .title {
   font-size: 2em;
 }
