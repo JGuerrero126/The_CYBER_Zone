@@ -1,13 +1,13 @@
 :root {
-  --black: #000000;
-  --lightblue: #5fc1fa;
-  --blue: #51aed3;
-  --darkblue: #035b8f;
-  --darkerblue: #004053;
+  --black: #78dec7;
+  --lightblue: #fbc7f7;
+  --blue: #fb7afc;
+  --darkblue: #d62ad0;
+  --darkerblue: #035b75;
 }
 
 body {
-  background-color: var(--black);
+  background-image: url(https://3.bp.blogspot.com/-jpu8UGjJiaw/Xqi6qD09yyI/AAAAAAAAOi4/v_geG2os4sYGigNUSjNMf7mpBKkXeko5gCLcBGAsYHQ/s1600/cyberpunk-wallpaper-hd.jpg);
   font-family: "Knewave", cursive;
 }
 
@@ -20,7 +20,9 @@ header {
   background-color: var(--black);
   padding-top: 1em;
   padding-bottom: 1em;
-  border-bottom: 0.5em solid var(--darkblue);
+  border-bottom: 0.5em solid var(--blue);
+  box-shadow: inset 0rem 0rem 0.5rem 0.5rem var(--lightblue),
+    0rem 0rem 1rem 1rem var(--lightblue);
 }
 
 header a {
@@ -62,8 +64,9 @@ footer {
   margin-top: 3em;
   margin-left: 1em;
   margin-right: 1em;
-  border: 0.5rem solid var(--darkblue);
+  border: 0.5rem solid var(--blue);
   border-radius: 0.5em;
+  box-shadow: 0rem 0rem 0.5rem 0.5rem var(--lightblue);
 }
 
 .custom-header {
