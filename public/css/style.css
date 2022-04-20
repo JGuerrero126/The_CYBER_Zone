@@ -1,20 +1,42 @@
-body {
-  background-color: rgb(47, 201, 201);
+:root {
+  --black: #000000;
+  --lightblue: #5fc1fa;
+  --blue: #51aed3;
+  --darkblue: #035b8f;
+  --darkerblue: #004053;
 }
 
-body a {
+body {
+  background-color: var(--black);
+  font-family: "Knewave", cursive;
+}
+
+body div a {
   text-decoration: none;
 }
 
 header {
-  background-color: rgb(165, 90, 235);
+  font-family: "Rubik Glitch", cursive;
+  background-color: var(--black);
   padding-top: 1em;
   padding-bottom: 1em;
+  border-bottom: 0.5em solid var(--darkblue);
 }
 
 header a {
+  border: 0.2em solid var(--lightblue);
+  background-color: var(--lightblue);
+  border-radius: 0.25em;
   color: aliceblue;
   margin-left: 1rem;
+}
+
+header a:hover {
+  transition: 1s;
+  background-color: aliceblue;
+  border: 0.2em solid aliceblue;
+  border-radius: 0.25em;
+  color: black;
 }
 
 .title {
@@ -29,17 +51,21 @@ header a {
   margin-top: 3em;
   margin-left: 1em;
   margin-right: 1em;
-  border: 0.5rem solid rgb(255, 255, 255);
+  border: 0.5rem solid var(--darkblue);
   border-radius: 0.5em;
 }
 
 .custom-header {
-  background-color: rgb(69, 214, 171);
+  font-family: "Rubik Glitch", cursive;
+  background-color: var(--blue);
   color: aliceblue;
+  text-shadow: 0.2em 0.2em var(--black);
+  border: 0.2em solid var(--black);
+  border-radius: 0.5em;
 }
 
 .custom-body {
-  background-color: rgb(255, 255, 255);
+  background-color: var(--black);
   color: rgb(0, 0, 0);
   margin-bottom: 1rem;
 }
@@ -48,10 +74,33 @@ header a {
   margin-top: 3em;
   margin-left: 4em;
   margin-right: 4em;
-  border: 0.5rem solid rgb(255, 255, 255);
+  border: 0.5rem solid var(--darkblue);
   border-radius: 0.5em;
 }
 
-/* .custom-color {
+.custom-color {
+  color: var(--darkblue);
+}
+
+.custom-bg {
+  background-color: var(--lightblue);
+}
+
+.custom-space {
+  margin-left: 1rem;
+}
+
+.input-space {
+  border: 0.5rem solid var(--darkblue);
+  border-radius: 0.5em;
+  max-width: 75%;
+  margin-left: 4em;
+  margin-right: 4em;
+}
+
+.blog-card {
+  font-family: "Rubik Glitch", cursive;
+  background-color: var(--blue);
   color: aliceblue;
-} */
+  text-shadow: 0.2em 0.2em var(--black);
+}

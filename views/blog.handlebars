@@ -1,20 +1,21 @@
-<div data-id="{{id}}" class="card custom-card">
+<div data-id="{{id}}" class="card custom-card custom-body">
   <h5 class="card-header custom-header">{{title}}</h5>
-  <div class="card-body custom-body">
-    <p class="card-text custom-body">{{text}}</p>
-    <p>Posted by {{user.name}} on {{format_date date_created}}</p>
+  <div class="">
+    <p class="custom-color custom-space">{{text}}</p>
+    <p class="custom-color custom-space">Posted by
+      {{user.name}}
+      on
+      {{format_date date_created}}</p>
   </div>
 </div>
 
 {{#if comments}}
   {{#each comments as |comment|}}
-    <div class="card comment-card">
-      <div class="card-header custom-header">
-      </div>
+    <div class="card comment-card custom-body">
       <div class="card-body">
-        <blockquote class="blockquote mb-0">
+        <blockquote class="blockquote mb-0 custom-color">
           <p>{{comment.text}}</p>
-          <footer class="blockquote-footer">{{user.name}}
+          <footer class="blockquote-footer custom-color">{{user.name}}
             on
             {{format_date comment.date_created}}</footer>
         </blockquote>
@@ -27,15 +28,22 @@
 
 <form data-id="{{id}}" class="newcomment">
   <div class="mb-3">
-    <label for="comment-text" class="form-label">Comment:</label>
+    <label
+      for="comment-text"
+      class="form-label custom-space custom-color"
+    >Comment:</label>
     <input
       type="text"
-      class="form-control"
+      class="form-control input-space"
       id="comment-text"
       aria-describedby="commentinput"
     />
   </div>
-  <button type="submit" class="btn btn-primary" data-id="{{id}}">Submit</button>
+  <button
+    type="submit"
+    class="btn custom-color custom-space custom-bg"
+    data-id="{{id}}"
+  >Submit</button>
 </form>
 
 <script src="/js/blog.js"></script>
